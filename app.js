@@ -11,6 +11,7 @@ const getMultiple = require("./routes/getMultiple");
 const logger = require("./utils/logger");
 const middleware = require("./utils/middleware");
 const mongoose = require("mongoose");
+var path = require("path");
 
 logger.info("connecting to", config.MONGODB_URI);
 
