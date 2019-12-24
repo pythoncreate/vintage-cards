@@ -39,6 +39,10 @@ app.use(middleware.requestLogger);
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: false }));
 
+app.get("/*", function(req, res) {
+  res.sendFile("./build/static/index.html");
+});
+
 app.use("/", indexRouter);
 app.use("/login", loginRouter);
 app.use("/user", userRouter);
