@@ -45,7 +45,7 @@ app.use("/user", userRouter);
 app.use("/testAPI", testAPIRouter);
 app.use("/getMultiple", getMultiple);
 
-router.get("/*", function(req, res, next) {
+app.get("/*", function(req, res, next) {
   res.render("index", { title: "Express" });
 });
 // app.use("/mwBase", mwBase);
