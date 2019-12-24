@@ -39,11 +39,10 @@ app.use(middleware.requestLogger);
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: false }));
 
-app.get("/*", function(req, res) {
-  res.sendFile("./build/static/index.html");
-});
-
 app.use("/", indexRouter);
+app.get("/*", function(req, res) {
+  res.sendFile("./build/index.html");
+});
 app.use("/login", loginRouter);
 app.use("/user", userRouter);
 app.use("/testAPI", testAPIRouter);
@@ -55,9 +54,9 @@ app.use(express.static("build"));
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// const PORT = process.env.PORT || 3001;
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
 
 module.exports = app;
