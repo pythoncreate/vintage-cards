@@ -47,7 +47,6 @@ app.use("/getMultiple", getMultiple);
 // app.use("/mwBase", mwBase);
 
 // error handler
-app.use(express.static("build"));
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
 
