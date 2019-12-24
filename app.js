@@ -45,7 +45,7 @@ app.use("/user", userRouter);
 app.use("/testAPI", testAPIRouter);
 app.use("/getMultiple", getMultiple);
 
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "./build", "index.html"));
 });
 // app.use("/mwBase", mwBase);
