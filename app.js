@@ -40,9 +40,6 @@ app.use(middleware.requestLogger);
 // app.use(express.urlencoded({ extended: false }));
 
 app.use("/", indexRouter);
-app.get("/*", function(req, res) {
-  res.sendFile("./build/index.html");
-});
 app.use("/login", loginRouter);
 app.use("/user", userRouter);
 app.use("/testAPI", testAPIRouter);
