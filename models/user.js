@@ -19,6 +19,10 @@ userSchema.set("toJSON", {
   }
 });
 
+userSchema.plugin(uniqueValidator, {
+  message: "Error, expected {PATH} to be unique."
+});
+
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
