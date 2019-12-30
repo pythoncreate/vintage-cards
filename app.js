@@ -1,6 +1,7 @@
 const config = require("./utils/config");
 const express = require("express");
 const app = express();
+const sslRedirect = require("heroku-ssl-redirect");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const indexRouter = require("./routes/index");
@@ -28,6 +29,8 @@ app.use(cors());
 app.use(express.static("build"));
 app.use(bodyParser.json());
 app.use(middleware.requestLogger);
+// enable ssl redirect
+app.use(sslRedirect());
 
 // let eBay = require("ebay-node-api");
 
