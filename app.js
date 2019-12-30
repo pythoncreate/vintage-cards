@@ -25,12 +25,13 @@ mongoose
     logger.error("error connection to MongoDB:", error.message);
   });
 
+// enable ssl redirect
+app.use(sslRedirect());
+
 app.use(cors());
 app.use(express.static("build"));
 app.use(bodyParser.json());
 app.use(middleware.requestLogger);
-// enable ssl redirect
-app.use(sslRedirect());
 
 // let eBay = require("ebay-node-api");
 
