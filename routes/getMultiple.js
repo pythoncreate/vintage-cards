@@ -11,7 +11,7 @@ url += "&responseencoding=JSON";
 url += "&version=967";
 url += "&trackingpartnercode=9";
 url += "&trackingid=5338164673";
-url += "&affiliateuserid=vintagebaseball";
+url += "&affiliateuserid=allvintagesearch";
 
 router.get("/", function(req, res, next) {
   var itemIDS = req.query.id;
