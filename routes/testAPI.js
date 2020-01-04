@@ -50,8 +50,10 @@ router.get("/", function(req, res, next) {
       const cardsData = newData.map(card => ({
         id: card.itemId,
         title: card.title,
-        image: card.pictureURLLarge ? card.pictureURLLarge : card.galleryURL,
-        itemURL: card.viewItemURL,
+        image: card.pictureURLLarge
+          ? card.pictureURLLarge.toString()
+          : card.galleryURL.toString(),
+        itemURL: card.viewItemURL.toString(),
         price:
           card.sellingStatus &&
           parseInt(card.sellingStatus[0].currentPrice[0]["__value__"]),

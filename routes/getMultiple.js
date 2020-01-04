@@ -25,8 +25,8 @@ router.get("/", function(req, res, next) {
       const cardsData = newData.map(card => ({
         id: card.ItemID,
         title: card.Title,
-        itemURL: card.ViewItemURLForNaturalSearch,
-        image: card.PictureURL[0],
+        itemURL: card.ViewItemURLForNaturalSearch.toString(),
+        image: card.PictureURL[0].toString(),
         updatedPrice: card.ConvertedCurrentPrice["Value"],
         updatedBids: card.BidCount,
         status: card.ListingStatus,
