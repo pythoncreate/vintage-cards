@@ -24,6 +24,7 @@
     "mongoose": "^5.7.13",
     "mongoose-unique-validator": "^2.0.3",
     "morgan": "~1.9.1",
-    "nodemon": "^2.0.1"
+    "nodemon": "^2.0.1",
+    "prerender-node": "^3.2.5"
   }
 }

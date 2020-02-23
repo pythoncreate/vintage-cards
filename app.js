@@ -32,6 +32,9 @@ app.use(cors());
 app.use(express.static("build"));
 app.use(bodyParser.json());
 app.use(middleware.requestLogger);
+app.use(
+  require("prerender-node").set("prerenderToken", "ImVNan3Dg0kxVC8QpTpd")
+);
 
 // let eBay = require("ebay-node-api");
 
