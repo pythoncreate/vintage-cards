@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 const axios = require("axios");
 
-var url = "http://svcs.ebay.com/services/search/FindingService/v1";
+var url = "https://svcs.ebay.com/services/search/FindingService/v1";
 url += "?OPERATION-NAME=findItemsAdvanced";
 url += "&SERVICE-VERSION=1.0.0";
 url += "&SECURITY-APPNAME=Christop-cards-PRD-4a6d6c794-5ea59d03";

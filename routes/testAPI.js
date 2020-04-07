@@ -4,7 +4,7 @@ const axios = require("axios");
 var moment = require("moment");
 moment().format();
 
-let url = "http://svcs.ebay.com/services/search/FindingService/v1";
+let url = "https://svcs.ebay.com/services/search/FindingService/v1";
 url += "?OPERATION-NAME=findItemsAdvanced";
 url += "&SERVICE-VERSION=1.0.0";
 url += "&SECURITY-APPNAME=Christop-cards-PRD-4a6d6c794-5ea59d03";
