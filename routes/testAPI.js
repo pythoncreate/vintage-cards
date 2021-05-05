@@ -53,10 +53,7 @@ router.get("/", function(req, res, next) {
         image: card.pictureURLLarge
           ? card.pictureURLLarge.toString()
           : card.galleryURL.toString(),
-        itemURL:
-          `https://www.ebay.com/itm/` &
-          card.itemId &
-          `?mkrid=711-53200-19255-0&siteid=0&mkcid=1&campid=5338164673&toolid=10001&mkevt=1&customId=allvintagesearch`,
+        itemURL: `https://www.ebay.com/itm/${id}?mkrid=711-53200-19255-0&siteid=0&mkcid=1&campid=5338164673&toolid=10001&mkevt=1&customId=allvintagesearch`.toString(),
         price:
           card.sellingStatus &&
           parseInt(card.sellingStatus[0].currentPrice[0]["__value__"]),
